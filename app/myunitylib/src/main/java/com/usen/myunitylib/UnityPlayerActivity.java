@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.os.Process;
+import android.widget.Toast;
 
 import com.unity3d.player.IUnityPlayerLifecycleEvents;
 import com.unity3d.player.UnityPlayer;
@@ -122,6 +123,7 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
     // Force event injection by overriding dispatchKeyEvent().
     @Override public boolean dispatchKeyEvent(KeyEvent event)
     {
+        Toast.makeText(this, "key code"+event.getScanCode(), Toast.LENGTH_SHORT).show();
         if (event.getAction() == KeyEvent.ACTION_MULTIPLE)
             return mUnityPlayer.injectEvent(event);
         return super.dispatchKeyEvent(event);

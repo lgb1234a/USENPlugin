@@ -95,6 +95,9 @@ public class MainActivity extends UnityPlayerActivity implements UstvMediaClient
 //            Toast.makeText(UnityPlayer.currentActivity, "yellow button:400", Toast.LENGTH_SHORT).show();
             UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "yellow");
         }
+        if (event.getScanCode() == 128 && event.getAction() == KeyEvent.ACTION_DOWN) {
+            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "terminal");
+        }
         return super.dispatchKeyEvent(event);
     }
 }
