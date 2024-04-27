@@ -78,25 +78,25 @@ public class MainActivity extends UnityPlayerActivity implements UstvMediaClient
         if (event.getScanCode() == 401 && event.getAction() == KeyEvent.ACTION_DOWN) {
             // blue
 //            Toast.makeText(UnityPlayer.currentActivity, "blue button:401", Toast.LENGTH_SHORT).show();
-            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "blue");
+            UnityPlayer.UnitySendMessage("SceneManager", "OnAndroidKeyDown", "blue");
         }
         if (event.getScanCode() == 398 && event.getAction() == KeyEvent.ACTION_DOWN) {
             // red
 //            Toast.makeText(UnityPlayer.currentActivity, "red button:398", Toast.LENGTH_SHORT).show();
-            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "red");
+            UnityPlayer.UnitySendMessage("SceneManager", "OnAndroidKeyDown", "red");
         }
         if (event.getScanCode() == 399 && event.getAction() == KeyEvent.ACTION_DOWN) {
             // green
 //            Toast.makeText(UnityPlayer.currentActivity, "green button:399", Toast.LENGTH_SHORT).show();
-            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "green");
+            UnityPlayer.UnitySendMessage("SceneManager", "OnAndroidKeyDown", "green");
         }
         if (event.getScanCode() == 400 && event.getAction() == KeyEvent.ACTION_DOWN) {
             // yellow
 //            Toast.makeText(UnityPlayer.currentActivity, "yellow button:400", Toast.LENGTH_SHORT).show();
-            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "yellow");
+            UnityPlayer.UnitySendMessage("SceneManager", "OnAndroidKeyDown", "yellow");
         }
         if (event.getScanCode() == 128 && event.getAction() == KeyEvent.ACTION_DOWN) {
-            UnityPlayer.UnitySendMessage("Main Camera", "OnAndroidKeyDown", "terminal");
+            UnityPlayer.UnitySendMessage("SceneManager", "OnAndroidKeyDown", "terminal");
         }
         return super.dispatchKeyEvent(event);
     }
